@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="ResharperBlogApp.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <!-- Latest compiled and minified CSS -->
+  <%--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>--%>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/demo.css" rel="stylesheet" />
+    <link href="Content/OwnStyleSheet.css" rel="stylesheet" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <%--  <script type="text/javascript" src="../JavaScript/jquery.js"></script>
+    <script type="text/javascript" src="../JavaScript/adi.js"></script>--%>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="Form1" class="navbar-form navbar" role="search" runat="server">
+      <section>
+        <img src="../images/banner.jpg" class="img-responsive" alt="Cinque Terre" />
+    </section>
+
+
+           <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">ResharperBlog</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class=""><a href="Home.aspx">Home</a></li>
+                      <%--  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Page 1-1</a></li>
+                                <li><a href="#">Page 1-2</a></li>
+                                <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                        </li>--%>
+                        <li>
+                            <a href="UI/WriteArticle.aspx" id="writeArticle" runat="server">My Articles</a>
+                        </li>
+                        <li><a href="#">About us</a></li>
+                    </ul>
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter you Keyword" />
+                    </div>
+                    <button type="submit" class="btn btn-default">Search</button>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="UI/SignUp.aspx" id="signUp" runat="server"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                        <li><a href="UI/Login.aspx" id="login" runat="server"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                        <li><a href="UI/Login.aspx?state=logout" id="logOut" runat="server"><span class="glyphicon glyphicon-log-out"></span>Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <asp:ContentPlaceHolder ID="body" runat="server">
+        
+    </asp:ContentPlaceHolder>
+  
+    <div class="panel-footer">
+        <span>
+            <a id="iconTwitter" target="_blank" href="https://twitter.com" title="Follow on Twitter">Twitter </a>
+        </span>
+        <span>| </span>
+        <span>
+            <a id="iconFacebook" target="_blank" href="https://facebook.com" title="Facebook Page">Facebook </a>
+        </span>
+        <span>| </span>
+        <span>
+            <a id="iconYouTube" target="_blank" href="https://YouTube.com" title="YouTube Channel">YouTube</a>
+        </span>
+       
+        <span>
+
+          <a id="footer1">
+www.resharper.org 
+</a>  
+        </span></div>
+
+  </form>
+
+</body>
+
+</html>
